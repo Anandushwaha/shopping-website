@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        #wishlist {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.main img {
+    max-width: 100px;
+    border-radius: 8px;
+}
+
+ 
+    </style>
+</head>
+<body>
+    <div id="product-details"></div>
+
+    <script src="data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            
+            const product = shopitemdata.find(item => item.id == productId);
+
+
+            if (product) {
+                const productDetails = document.getElementById('product-details');
+                productDetails.innerHTML = `
+                   <div class="main"> <h1 class="name">${product.name}</h1>
+                    <img class="images" src="${product.image}" alt="${product.name}">
+                    <p class="price">Price: $${product.price}</p>
+                    </div>              
+                      `;
+            } else {
+                document.getElementById('product-details').innerText = 'Product not found';
+            }
+        });
+    </script>
+</body>
+</html>

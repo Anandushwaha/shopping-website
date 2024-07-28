@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeShop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"  href="form.css">
+    <style>
+        
+    </style>
+    <script src="https://kit.fontawesome.com/70a0eae02d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-item">Codeshop</a>
+
+            <!-- Cart Details Link -->
+            <a href="cart.html" class="navbar-item" id="cart-icon">Cart</a> 
+            <a href="wishlist.html" class="navbar-item">Wishlist</a>
+           
+        </div>
+        <div class="navbar-right">
+           
+             <a href="login.html" class="navbar-item signup-btn">Login</a>
+            <a href="signup.html" class="navbar-item signup-btn">Sign Up</a>
+        </div>
+    </nav>
+    <!-- Search container -->
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search for product">
+        <button id="search">Search</button>
+        <div id="search-results"></div>
+    </div>
+    
+    
+    <!-- Category scrolling bar -->
+    <div class="category-bar">
+        <a href="#" class="category-item">Men</a>
+        <a href="#" class="category-item">Women</a>
+        <a href="#" class="category-item">Kids</a>
+        <a href="#" class="category-item">Accessories</a>
+        <a href="#" class="category-item">Shoes</a>
+        <a href="#" class="category-item">Sale</a>
+        <a href="#" class="category-item">New Arrivals</a>
+        <a href="#" class="category-item">Best Sellers</a>
+        <a href="#" class="category-item">Trending</a>
+    </div>
+    
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="shop1.jpeg" alt="Image 1" class="carousel-image">
+            <img src="shop2.jpg" alt="Image 2" class="carousel-image">
+            <img src="shop3.jpg" alt="Image 3" class="carousel-image">
+        </div>
+        <button class="carousel-button prev" onclick="prevImage()">❮</button>
+        <button class="carousel-button next" onclick="nextImage()">❯</button>
+    </div>
+    
+    
+                
+    <!-- Cart Modal -->
+     <div id="shop">
+
+     </div>
+     <div id="shop1">
+
+     </div>
+     <footer>
+        <div class="footer-content">
+            <p>&copy;codeshop/anandkushwaha</p>
+            <div class="footer-images">
+                <a href="https://www.instagram.com/_anand_kushwaha1/" target="_blank">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+                <a href="https://in.linkedin.com/" target="_blank">
+                    <img src="business.png" alt="Business">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+     
+    <script src="data.js"></script> 
+    <script src="index.js"></script>
+</body>
+</html>
