@@ -1,4 +1,4 @@
-# Sure! Here's a description for your shopping website:
+
 
 ---
 
